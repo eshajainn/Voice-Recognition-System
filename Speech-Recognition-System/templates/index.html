@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>VOXIFY</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>VOXIFY</h1>
+<p>Voice • Text • Translation AI System</p>
+
+</header>
+
+
+<div class="grid">
+
+<!-- Speech to Text -->
+
+<div class="card">
+
+<h2>Speech → Text</h2>
+
+<label>Speech Language</label>
+
+<select id="language">
+<option value="en-US">English</option>
+<option value="hi-IN">Hindi</option>
+<option value="mr-IN">Marathi</option>
+<option value="ta-IN">Tamil</option>
+<option value="te-IN">Telugu</option>
+</select>
+
+<input type="file" id="audioFile" accept=".wav">
+
+<div class="button-group">
+
+<button onclick="uploadAudio()">Upload Audio</button>
+
+<button onclick="startRecording()">🎤 Speak</button>
+
+</div>
+
+<div class="output">
+
+<p id="result">Speech transcription will appear here</p>
+
+</div>
+
+<button class="secondary" onclick="copyText()">Copy Text</button>
+
+</div>
+
+
+<!-- Translation -->
+
+<div class="card">
+
+<h2>Translate</h2>
+
+<label>Translate To</label>
+
+<select id="translateLang">
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="mr">Marathi</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="es">Spanish</option>
+<option value="fr">French</option>
+<option value="de">German</option>
+</select>
+
+<button onclick="translateText()">Translate</button>
+
+<div class="output">
+
+<p id="translation">Translated text will appear here</p>
+
+</div>
+
+</div>
+
+
+<!-- Text to Speech -->
+
+<div class="card">
+
+<h2>Text → Speech</h2>
+
+<textarea id="textInput" placeholder="Enter text here..."></textarea>
+
+<label>Voice Language</label>
+
+<select id="speechLang">
+<option value="en-US">English</option>
+<option value="hi-IN">Hindi</option>
+<option value="mr-IN">Marathi</option>
+<option value="ta-IN">Tamil</option>
+<option value="te-IN">Telugu</option>
+<option value="es-ES">Spanish</option>
+<option value="fr-FR">French</option>
+<option value="de-DE">German</option>
+</select>
+
+<button onclick="speakText()">Play Speech</button>
+
+</div>
+
+</div>
+
+<footer>
+
+Made under Codtech IT Solutions Pvt Ltd
+
+</footer>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
